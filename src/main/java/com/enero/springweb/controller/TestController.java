@@ -80,4 +80,19 @@ public class TestController {
             return "test/pruebas";
     }
     
+    @RequestMapping("programa")
+    public String programa() {
+            return "test/programa";
+    }
+    
+    @ResponseBody
+    @RequestMapping("guardarPrograma")
+    public String guardarPrograma(Programa programa) {
+            return programa.getNombre()+"<br/> "+programa.getDescripcion()+"<br/> "+programa.getCodigo();
+    }
+    
+    @RequestMapping("programaajax")
+    public String programaajax() {
+            return "test/programaajax";
+    }
 }
